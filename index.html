@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Christ-centered hope for anyone looking for peace, forgiveness, and new life in Jesus Christ." />
+  <title>Hope in Jesus</title>
+
+  <style>
+    :root {
+      --bg: #0b1220;
+      --panel: #0f1a33;
+      --text: #f1f5ff;
+      --muted: #c7d2fe;
+      --border: rgba(255,255,255,.12);
+      --radius: 18px;
+      --shadow: 0 14px 40px rgba(0,0,0,.45);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: linear-gradient(180deg, #070b14, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: white; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 1000px; margin: auto; padding: 24px 18px 60px; }
+
+    header {
+      display: flex; justify-content: space-between; align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px; margin-bottom: 24px; gap: 14px; flex-wrap: wrap;
+    }
+    nav a { margin-left: 14px; font-size: 14px; color: var(--muted); }
+
+    .card {
+      background: linear-gradient(180deg, rgba(15,26,51,.95), rgba(15,26,51,.75));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 40px; line-height: 1.1; margin-top: 0; }
+    h2 { margin-top: 0; }
+    .muted { color: var(--muted); }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: white;
+      color: #0b1220;
+      font-weight: 700;
+    }
+    .btn.alt {
+      background: transparent;
+      color: white;
+      border: 1px solid var(--border);
+      margin-left: 10px;
+    }
+
+    .grid { display: grid; gap: 18px; }
+    @media (min-width: 800px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+      .grid.three { grid-template-columns: repeat(3,1fr); }
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.05);
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .verseBox {
+      margin-top: 12px;
+      padding: 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid var(--border);
+    }
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+
+  <header>
+    <div>
+      <strong>Hope in Jesus</strong><br>
+      <span class="muted">Christ-centered hope for the weary</span>
+    </div>
+    <nav>
+      <a href="#gospel">Gospel</a>
+      <a href="#pray">Prayer</a>
+      <a href="#next">Next Steps</a>
+    </nav>
+  </header>
+
+  <section class="card">
+    <h1>Hope is not a feeling.<br>Hope is a Person.</h1>
+    <p class="muted">
+      If you are tired, ashamed, afraid, or searching for peace — Jesus Christ invites you to come to Him.
+      You don’t fix yourself first. He does the saving.
+    </p>
+
+    <a href="#gospel" class="btn">What is the Gospel?</a>
+    <a href="#pray" class="btn alt">Pray now</a>
+
+    <div class="verseBox">
+      “Come to Me, all you who labor and are heavy laden, and I will give you rest.”
+      <br><strong>Matthew 11:28</strong>
+    </div>
+  </section>
+
+  <section class="grid three">
+    <div class="card">
+      <h2>God sees you</h2>
+      <p class="muted">You are not forgotten. God knows your pain and hears your cry.</p>
+      <p class="muted"><strong>Psalm 34:15</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>Jesus saves</h2>
+      <p class="muted">Jesus came to seek and to save the lost — not the perfect.</p>
+      <p class="muted"><strong>Luke 19:10</strong></p>
+    </div>
+
+    <div class="card">
+      <h2>New life is real</h2>
+      <p class="muted">Anyone in Christ is made new. Forgiven. Clean. Restored.</p>
+      <p class="muted"><strong>2 Corinthians 5:17</strong></p>
+    </div>
+  </section>
+
+  <section class="grid two" id="gospel">
+    <div class="card">
+      <h2>The Gospel</h2>
+      <p class="muted">
+        We have all sinned and fallen short of God’s glory. Sin separates us from God.
+        But God, in His love, sent His Son.
+      </p>
+      <ul class="muted">
+        <li>All have sinned — Romans 3:23</li>
+        <li>Sin brings death — Romans 6:23</li>
+        <li>Jesus died and rose again — 1 Corinthians 15:3–4</li>
+        <li>Saved by grace through faith — Ephesians 2:8–9</li>
+      </ul>
+      <p class="muted">
+        “If you confess with your mouth the Lord Jesus and believe in your heart that God raised Him from the dead,
+        you will be saved.”
+        <br><strong>Romans 10:9</strong>
+      </p>
+    </div>
+
+    <div class="card" id="next">
+      <h2>Next Steps</h2>
+      <ul class="muted">
+        <li>Talk to Jesus honestly (Psalm 62:8)</li>
+        <li>Read the Gospel of John (start with John 1)</li>
+        <li>Connect with a Bible-teaching church (Acts 2:42)</li>
+        <li>Walk daily by the Holy Spirit (Galatians 5:16)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="grid two" id="pray">
+    <div class="card">
+      <h2>A Prayer for Salvation</h2>
+      <p class="muted">God hears sincere hearts. If this reflects your heart, pray:</p>
+      <div class="verseBox">
+        “God, I need You. I confess my sin and believe Jesus died for me and rose again.
+        Please forgive me, make me new, and lead my life from this day forward.
+        I trust You alone. In Jesus’ name, amen.”
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Prayer Request</h2>
+      <p class="muted">Tap below to email a prayer request directly.</p>
+
+      <form onsubmit="return false;">
+        <input id="name" type="text" placeholder="Your name (optional)">
+        <textarea id="msg" placeholder="How can we pray for you?"></textarea>
+        <a id="mailto" class="btn" href="mailto:jesusundisputed@gmail.com?subject=Prayer%20Request">Email Prayer Request</a>
+      </form>
+
+      <p class="muted" style="margin-top:10px">
+        “Cast all your care upon Him, for He cares for you.”
+        <strong>1 Peter 5:7</strong>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div>© <span id="year"></span> Hope in Jesus</div>
+    <div>Jesus Christ is Lord</div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const TO = "jesusundisputed@gmail.com";
+  const mailto = document.getElementById("mailto");
+  const nameEl = document.getElementById("name");
+  const msgEl  = document.getElementById("msg");
+
+  function refreshMailto() {
+    const name = (nameEl.value || "").trim();
+    const msg  = (msgEl.value  || "").trim();
+
+    const subject = encodeURIComponent("Prayer Request");
+    const body = encodeURIComponent((name ? ("Name: " + name + "\n\n") : "") + msg);
+
+    mailto.href = `mailto:${TO}?subject=${subject}&body=${body}`;
+  }
+
+  nameEl.addEventListener("input", refreshMailto);
+  msgEl.addEventListener("input", refreshMailto);
+  refreshMailto();
+</script>
+
+</body>
+</html>
