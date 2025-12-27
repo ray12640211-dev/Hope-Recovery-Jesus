@@ -1,153 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hope, recovery, and freedom through Jesus Christ. Addiction recovery, character healing, surrender, and biblical discipleship." />
+  <meta name="description" content="Hope and freedom through Jesus Christ. Surrender, Scripture, and biblical discipleship." />
   <meta name="google-site-verification" content="PASTE-YOUR-GOOGLE-CODE-HERE" />
-  <title>Jesus Undisputed | Hope & Recovery in Christ</title>
+  <title>Jesus Undisputed | Hope in Christ</title>
 
-  
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  
-<div class="page-border"></div>
+  <div class="page-border"></div>
 
-<main class="container">
+  <main class="container">
+    <header>
+      <h1>Jesus Undisputed</h1>
+      <p>Hope and transformation through Jesus Christ — not behavior modification, but new life.</p>
+    </header>
 
-<header>
-  <h1>Jesus Undisputed</h1>
-  <p>Hope, recovery, and transformation through Jesus Christ — not behavior modification, but new life.</p>
-</header>
+    <div class="layout">
+      <nav>
+        <button data-panel="home" class="active">Home</button>
+        <button data-panel="surrender">Surrender</button>
+        <button data-panel="connect">Connect</button>
+      </nav>
 
-<div class="layout">
-  <nav>
-    <button data-panel="home" class="active">Home</button>
-    <button data-panel="recovery">Recovery</button>
-    <button data-panel="defects">Defects</button>
-    <button data-panel="defense">Defense Mechanisms</button>
-    <button data-panel="surrender">Surrender</button>
-    <button data-panel="connect">Connect</button>
-  </nav>
+      <div class="content">
+        <!-- HOME -->
+        <section class="panel active" id="panel-home">
+          <div class="grid">
+            <div class="card" style="grid-column: span 12;">
+              <h2>Daily Devotional</h2>
+              <blockquote>
+                “If the Son makes you free, you shall be free indeed.” — John 8:36
+              </blockquote>
+              <p class="muted">Freedom begins with truth, surrender, and walking with Christ daily.</p>
+            </div>
 
-  <main>
-  <!-- HOME -->
-<section class="panel active" id="panel-home">
-  <class="grid">
-    <class="card" style="grid-column: span 12;">
-      <h2>Daily Devotional</h2>
-      <blockquote>
-        “If the Son makes you free, you shall be free indeed.” — John 8:36
-      </blockquote>
-      <p class="muted">Freedom begins with truth, surrender, and walking with Christ daily.</p>
-    </div>
+            <div class="card" style="grid-column: span 6;">
+              <h3>Search Scripture</h3>
+              <input type="text" placeholder="Search Bible verses…" style="width:100%;padding:.6rem;border-radius:8px;">
+              <p class="muted">Interpretations are Christ-centered and Scripture-led.</p>
+            </div>
 
-    <div class="card" style="grid-column: span 6;">
-      <h3>Search Scripture</h3>
-      <input type="text" placeholder="Search Bible verses…" style="width:100%;padding:.6rem;border-radius:8px;">
-      <p class="muted">Interpretations are Christ-centered and Scripture-led.</p>
-    </div>
+            <div class="card" style="grid-column: span 6;">
+              <h3>Live Hope Counter</h3>
+              <h1 id="surrenderCount">0</h1>
+              <p class="muted">People surrendering their lives to Jesus.</p>
+            </div>
+          </div>
+        </section>
 
-    <div class="card" style="grid-column: span 6;">
-      <h3>Live Hope Counter</h3>
-      <h1 id="surrenderCount">0</h1>
-      <p class="muted">People surrendering their lives to Jesus.</p>
-    </div>
-  </div>
-</section>
+        <!-- SURRENDER -->
+        <section class="panel" id="panel-surrender">
+          <div class="card">
+            <h2>Total Surrender</h2>
+            <p class="muted">Salvation is a free gift — Ephesians 2:8–9</p>
+            <textarea placeholder="Your surrender prayer…" style="width:100%;height:140px;"></textarea>
+            <button type="button" onclick="recordSurrender()">Submit Surrender</button>
+          </div>
+        </section>
 
-<!-- RECOVERY -->
-<section class="panel" id="panel-recovery">
-  <div class="card">
-    <h2>Recovery Through Jesus Christ</h2>
-    <p><strong>Recovery is not behavior modification—it is transformation. Jesus Christ does not merely help us cope; He sets us free.</strong></p>
-  </div>
-</section>
-
-<!-- DEFECTS -->
-<section class="panel" id="panel-defects">
-  <div class="card">
-    <h2>Character Defects</h2>
-    <p class="muted">Healing the heart through truth, repentance, and renewal.</p>
-    <ul>
-      <li>Anger</li>
-      <li>Fear & Anxiety</li>
-      <li>Codependency</li>
-      <li>Pride</li>
-      <li>Control</li>
-      <li>Shame</li>
-    </ul>
-  </div>
-</section>
-
-<!-- DEFENSE MECHANISMS -->
-<section class="panel" id="panel-defense">
-  <div class="card">
-    <h2>Defense Mechanisms</h2>
-    <blockquote>
-      “There is a way that seems right to a man, but its end is the way of death.” — Proverbs 14:12
-    </blockquote>
-    <p class="muted">Defense mechanisms hide pain but prevent healing.</p>
-  </div>
-</section>
-
-<!-- SURRENDER -->
-<section class="panel" id="panel-surrender">
-  <div class="card">
-    <h2>Total Surrender</h2>
-    <p class="muted">Salvation is a free gift — Ephesians 2:8–9</p>
-    <textarea placeholder="Your surrender prayer…" style="width:100%;height:140px;"></textarea>
-    <button onclick="recordSurrender()">Submit Surrender</button>
-  </div>
-</section>
-
-<!-- CONNECT -->
-<section class="panel" id="panel-connect">
-  <div class="card">
-    <h2>Connect With Bible-Teaching Churches</h2>
-    <blockquote>
-      “All Scripture is given by inspiration of God and profitable for doctrine, for reproof, for correction, for instruction in righteousness, that the man of God may be complete, thoroughly equipped for every good work.” — 2 Timothy 3:16–17
-    </blockquote>
-    <a href="https://www.google.com/maps/search/Calvary+Chapel+near+me" target="_blank">
-      Find Churches Near You
-    </a>
-  </div>
-</section>
-  </main>
-</div>
-
-<footer>
-  Jesus Undisputed © <span id="year"></span>
-</footer>
-
-<script>
-  const buttons = document.querySelectorAll("nav button");
-  const panels = document.querySelectorAll(".panel");
-
-  buttons.forEach(btn => {
-    btn.onclick = () => {
-      buttons.forEach(b => b.classList.remove("active"));
-      panels.forEach(p => p.classList.remove("active"));
-      btn.classList.add("active");
-      document.getElementById("panel-" + btn.dataset.panel).classList.add("active");
-    };
-  });
-
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  let count = localStorage.getItem("surrenders") || 0;
-  document.getElementById("surrenderCount").textContent = count;
-
-  function recordSurrender(){
-    count++;
-    localStorage.setItem("surrenders", count);
-    document.getElementById("surrenderCount").textContent = count;
-    alert("Praise God. Your surrender has been recorded.");
-  }
-</script>
-
-</body>
-</html>
+        <!-- CONNECT -->
+        <section class="panel" id="panel-connect">
+          <div class="card">
+            <h2>Connect With Bible-Teaching Churches</h2>
+            <blockquote>
+              “All Scripture is given by inspiration of God and profitable for doctrine, for reproof, for correction, for instruction in righteousness, that the man of God may be complete, thoroughly equipped for every good work
