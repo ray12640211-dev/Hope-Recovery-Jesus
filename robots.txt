@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ray12640211-dev.github.io/hope-recovery-jesus/sitemap.xml
