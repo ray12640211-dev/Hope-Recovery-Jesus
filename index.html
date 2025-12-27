@@ -50,9 +50,7 @@
 
             <div class="card" style="grid-column: span 12;">
               <h2>Daily Devotionals</h2>
-              <p class="muted">
-                Get daily devotionals from reliable Bible resources:
-              </p>
+              <p class="muted">Get daily devotionals from reliable Bible resources:</p>
 
               <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
                 <a class="primary" href="https://www.youversion.com/the-bible-app/" target="_blank" rel="noopener">
@@ -113,7 +111,7 @@
               Salvation is by grace through faith. If you believe, you may pray:
             </p>
 
-            <textarea aria-label="Salvation prayer">
+            <textarea id="salvationPrayer" aria-label="Salvation prayer">
 Lord Jesus, I know that I am a sinner.
 I believe You died for my sins and rose again.
 I turn from my sin and place my trust in You alone.
@@ -123,7 +121,8 @@ I receive You as my Lord and Savior.
 In Jesus’ name, amen.
             </textarea>
 
-            <div style="margin-top:12px;">
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+              <button type="button" onclick="copySalvationPrayer()">Copy Prayer</button>
               <button type="button" onclick="confirmSalvation()">I Prayed This</button>
             </div>
 
@@ -177,18 +176,15 @@ In Jesus’ name, amen.
             <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,.14);">
 
             <h3>Send Your Prayer Request</h3>
-            <p class="muted">
-              Fill this out and click “Send Prayer Request.” Your email app will open and send it to us.
-            </p>
+            <p class="muted">Fill this out and click “Send Prayer Request.” It will open your email to send to us.</p>
 
-            <!-- IMPORTANT: replace YOUR_GMAIL_HERE@gmail.com in the script below -->
             <form id="prayerForm" style="display:grid;gap:10px;margin-top:12px;">
               <input id="prayerName" type="text" placeholder="Your name (optional)">
               <input id="prayerEmail" type="email" placeholder="Your email (optional)">
               <textarea id="prayerRequest" placeholder="Write your prayer request here..." required></textarea>
               <button type="submit">Send Prayer Request</button>
               <p class="muted" style="font-size:13px;margin:0;">
-                Note: This opens your email client (Gmail/Apple Mail/Outlook). If nothing opens, you may not have a default email app set.
+                If nothing opens, you may not have a default email app set on this device.
               </p>
             </form>
           </div>
@@ -197,26 +193,26 @@ In Jesus’ name, amen.
         <!-- WORSHIP MUSIC -->
         <section class="panel" id="panel-music">
           <div class="card">
-            <h2>Worship Music</h2>
-            <p class="muted">Choose a trusted worship source below:</p>
+            <h2>Worship Music Links</h2>
+            <p class="muted">Tap a link to listen (opens in a new tab/app):</p>
 
             <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+              <a class="primary" href="https://www.klove.com/listen/player" target="_blank" rel="noopener">
+                K-LOVE Live Stream
+              </a>
+              <a class="primary" href="https://www.air1.com/listen" target="_blank" rel="noopener">
+                Air1 Worship Now Live
+              </a>
               <a class="primary" href="https://music.youtube.com/search?q=christian+worship" target="_blank" rel="noopener">
-                YouTube Music: Worship Search
-              </a>
-              <a class="primary" href="https://www.klove.com/" target="_blank" rel="noopener">
-                K-LOVE Radio
-              </a>
-              <a class="primary" href="https://www.air1.com/" target="_blank" rel="noopener">
-                Air1 Worship Now
+                YouTube Music Worship Search
               </a>
               <a class="primary" href="https://open.spotify.com/search/worship" target="_blank" rel="noopener">
-                Spotify: Worship Search
+                Spotify Worship Search
               </a>
             </div>
 
             <p class="muted" style="margin-top:12px;font-size:13px;">
-              Tip: Open in a new tab and press play—browser rules prevent auto-play on most sites.
+              Note: websites cannot auto-play music on most browsers; users press play on the music page.
             </p>
           </div>
         </section>
@@ -225,9 +221,7 @@ In Jesus’ name, amen.
         <section class="panel" id="panel-connect">
           <div class="card">
             <h2>Find Bible-Teaching Churches Near You</h2>
-            <p class="muted">
-              This opens your map and searches based on your location.
-            </p>
+            <p class="muted">This opens your map and searches based on your location.</p>
 
             <a class="primary"
                href="https://www.google.com/maps/search/?api=1&query=Calvary%20Chapel%20near%20me"
@@ -238,4 +232,5 @@ In Jesus’ name, amen.
 
             <blockquote style="margin-top:14px;">
               “All Scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction,
-              for instruction in righteousness, that the man of God may be complete, thoroughly equipped for every good work
+              for instruction in righteousness, that the man of God may be complete, thoroughly equipped for every good work.”
+              <br
