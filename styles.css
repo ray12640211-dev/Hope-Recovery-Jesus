@@ -1,0 +1,56 @@
+:root {
+  --gold: #d6b25e;
+  --gold-glow: rgba(255, 215, 120, 0.75);
+  --overlay: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  color: white;
+
+  background:
+    linear-gradient(var(--overlay), var(--overlay)),
+    url("sunrise.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Golden border */
+.page-border {
+  position: fixed;
+  inset: 16px;
+  pointer-events: none;
+  border-radius: 18px;
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 0 14px var(--gold-glow),
+    0 0 28px var(--gold-glow),
+    inset 0 0 12px rgba(255, 215, 120, 0.35);
+}
+
+/* Center content */
+.container {
+  text-align: center;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  max-width: 900px;
+  width: 90%;
+}
