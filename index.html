@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hope and freedom through Jesus Christ. Surrender and biblical discipleship." />
+  <meta name="description" content="The free gift of salvation through Jesus Christ. Grace alone, faith alone, Christ alone." />
   <meta name="google-site-verification" content="PASTE-YOUR-GOOGLE-CODE-HERE" />
-  <title>Jesus Undisputed | Hope in Christ</title>
+  <title>Jesus Undisputed | Salvation by Grace</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -17,16 +17,16 @@
     <header>
       <h1>Jesus Undisputed</h1>
       <p>
-        Hope and transformation through Jesus Christ —
-        not behavior modification, but new life.
+        Salvation is the free gift of God through Jesus Christ —
+        not works, not religion, not self-improvement.
       </p>
     </header>
 
     <div class="layout">
       <nav>
         <button data-panel="home" class="active" type="button">Home</button>
-        <button data-panel="surrender" type="button">Surrender</button>
-        <button data-panel="connect" type="button">Connect</button>
+        <button data-panel="salvation" type="button">Salvation</button>
+        <button data-panel="connect" type="button">Find Churches</button>
       </nav>
 
       <div class="content">
@@ -35,43 +35,149 @@
         <section class="panel active" id="panel-home">
           <div class="grid">
             <div class="card" style="grid-column: span 12;">
-              <h2>Daily Devotional</h2>
+              <h2>The Free Gift of God</h2>
               <blockquote>
-                “If the Son makes you free, you shall be free indeed.”
-                <br>— John 8:36
+                “For by grace you have been saved through faith, and that not of yourselves;
+                it is the gift of God, not of works, lest anyone should boast.”
+                <br>— Ephesians 2:8–9
               </blockquote>
               <p class="muted">
-                Freedom begins with truth, surrender,
-                and walking with Christ daily.
+                Salvation is received, not achieved.
+                Jesus paid the full price at the cross.
               </p>
+            </div>
+
+            <div class="card" style="grid-column: span 12;">
+              <h3>Worship Music</h3>
+              <p class="muted">
+                Music will not autoplay — press play when ready.
+              </p>
+
+              <iframe
+                style="border-radius:12px;width:100%;height:152px;"
+                src="https://open.spotify.com/embed/playlist/2r2152cOc7SrUs28EzPfrk"
+                frameborder="0"
+                allow="encrypted-media; clipboard-write; fullscreen; picture-in-picture"
+                loading="lazy">
+              </iframe>
             </div>
           </div>
         </section>
 
-        <!-- SURRENDER -->
-        <section class="panel" id="panel-surrender">
+        <!-- SALVATION / ROMANS ROAD -->
+        <section class="panel" id="panel-salvation">
           <div class="card">
-            <h2>Total Surrender</h2>
+            <h2>How to Be Saved</h2>
+            <p class="muted">What the Bible says (Romans Road):</p>
+
+            <blockquote>
+              “For all have sinned and fall short of the glory of God.”
+              <br>— Romans 3:23
+            </blockquote>
+
+            <blockquote>
+              “But God demonstrates His own love toward us, in that while we were still sinners,
+              Christ died for us.”
+              <br>— Romans 5:8
+            </blockquote>
+
+            <blockquote>
+              “For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.”
+              <br>— Romans 6:23
+            </blockquote>
+
+            <blockquote>
+              “If you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead,
+              you will be saved.”
+              <br>— Romans 10:9
+            </blockquote>
+
+            <blockquote>
+              “For whoever calls on the name of the Lord shall be saved.”
+              <br>— Romans 10:13
+            </blockquote>
+
+            <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,.14);">
+
+            <h3>Prayer to Receive Jesus Christ</h3>
             <p class="muted">
-              Salvation is a free gift — Ephesians 2:8–9
+              Salvation is by grace through faith. If you believe, you may pray:
             </p>
-            <textarea
-              placeholder="Your surrender prayer…"
-              aria-label="Surrender prayer"
-            ></textarea>
+
+            <textarea aria-label="Salvation prayer">
+Lord Jesus, I know that I am a sinner.
+I believe You died for my sins and rose again.
+I turn from my sin and place my trust in You alone.
+Please forgive me, save me by Your grace,
+and give me eternal life.
+I receive You as my Lord and Savior.
+In Jesus’ name, amen.
+            </textarea>
+
             <div style="margin-top:12px;">
-              <button type="button" onclick="recordSurrender()">
-                Submit Surrender
-              </button>
+              <button type="button" onclick="confirmSalvation()">I Prayed This</button>
             </div>
+
+            <p class="muted" id="salvationMsg" style="display:none;margin-top:12px;">
+              If you believed and prayed, trust God’s promise —
+              <strong>Ephesians 2:8–9</strong>.
+              Now grow by reading the Gospel of John and connecting with a Bible-teaching church.
+            </p>
           </div>
         </section>
 
         <!-- CONNECT -->
         <section class="panel" id="panel-connect">
           <div class="card">
-            <h2>Connect With Bible-Teaching Churches</h2>
-            <blockquote>
-              “All Scripture is given by inspiration of God and is profitable
-              for doctrine, for reproof, for correction, for instruction in righteousness,
-              that the man of God may be complete, thoroughly equipped for every good work
+            <h2>Find Bible-Teaching Churches Near You</h2>
+            <p class="muted">
+              This opens your map and searches based on your location.
+            </p>
+
+            <a class="primary"
+               href="https://www.google.com/maps/search/?api=1&query=Calvary%20Chapel%20near%20me"
+               target="_blank"
+               rel="noopener">
+              Open Map — Churches Near Me
+            </a>
+
+            <blockquote style="margin-top:14px;">
+              “All Scripture is given by inspiration of God…”
+              <br>— 2 Timothy 3:16–17
+            </blockquote>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      Jesus Undisputed © <span id="year"></span>
+    </footer>
+  </main>
+
+  <script>
+    // Navigation
+    const buttons = document.querySelectorAll("nav button");
+    const panels = document.querySelectorAll(".panel");
+
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        panels.forEach(p => p.classList.remove("active"));
+        btn.classList.add("active");
+        const target = document.getElementById("panel-" + btn.dataset.panel);
+        if (target) target.classList.add("active");
+      });
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function confirmSalvation() {
+      document.getElementById("salvationMsg").style.display = "block";
+      alert("Praise God. Salvation is the gift of grace through faith in Jesus Christ.");
+    }
+  </script>
+</body>
+</html>
