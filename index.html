@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Hope & Recovery in Jesus Christ | Freedom, Healing, Salvation</title>
-  <meta name="description" content="Christ-centered hope and recovery through Jesus Christ. Salvation by grace, freedom from addictions, healing from anger, anxiety, control, and codependency. Connect with Bible-teaching churches." />
+  <meta name="description" content="Christ-centered hope and recovery through Jesus Christ. Freedom from addiction and bondage, healing from anger, anxiety, control, codependency, and more. The free gift of salvation. Connect with Bible-teaching churches." />
 
-  <!-- If you use Google Search Console meta verification, keep it here:
+  <!-- If you're using Google Search Console meta verification, keep it here:
   <meta name="google-site-verification" content="PASTE_YOURS_HERE" />
   -->
 
   <meta property="og:title" content="Hope & Recovery in Jesus Christ" />
-  <meta property="og:description" content="Freedom, healing, and salvation through Jesus Christ. Christ-centered recovery and discipleship." />
+  <meta property="og:description" content="Freedom, healing, and salvation through Jesus Christ. Christ-centered recovery from addiction and heart/character struggles." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -24,6 +24,9 @@
       --border:rgba(20,35,70,.18);
       --shadow:0 16px 60px rgba(0,0,0,.18);
       --radius:18px;
+
+      --accent:#2b64ff;
+      --accent2:#00a9ff;
 
       --max: 1280px;
       --sidebar: 290px;
@@ -37,6 +40,7 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       color:var(--text);
       line-height:1.55;
+
       background:
         radial-gradient(900px 500px at 15% 10%, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 60%),
         radial-gradient(900px 500px at 85% 15%, rgba(255,255,255,.75) 0%, rgba(255,255,255,0) 60%),
@@ -44,6 +48,18 @@
         linear-gradient(180deg, #8fd3ff 0%, #dff4ff 35%, #ffffff 100%);
     }
 
+    /* Optional: upload an image (heaven.jpg) to repo root and enable below */
+    .bg-overlay-image{
+      position:fixed; inset:0;
+      background-image: none; /* url('heaven.jpg') */
+      background-size: cover;
+      background-position:center;
+      opacity:.18;
+      pointer-events:none;
+      z-index:-1;
+    }
+
+    a{color:inherit}
     .wrap{
       max-width: calc(var(--max) + var(--sidebar) + var(--gap));
       margin: 0 auto;
@@ -54,7 +70,6 @@
       align-items:start;
     }
 
-    /* Sidebar */
     .sidebar{
       position: sticky;
       top: 14px;
@@ -79,6 +94,7 @@
       color: var(--muted);
       margin:0;
     }
+
     .nav{
       display:flex;
       flex-direction:column;
@@ -105,7 +121,11 @@
       border-color: rgba(43,100,255,.35);
       background: linear-gradient(135deg, rgba(43,100,255,.14), rgba(0,169,255,.10));
     }
-    .nav small{font-weight:600;color:var(--muted);opacity:.9}
+    .nav small{
+      font-weight:600;
+      color:var(--muted);
+      opacity:.9;
+    }
 
     .sidebar .mini{
       padding: 10px 16px 14px;
@@ -114,8 +134,8 @@
       font-size: 12.5px;
     }
 
-    /* Main */
-    .main{min-width:0}
+    .main{min-width: 0;}
+
     .hero{
       border:1px solid var(--border);
       border-radius: var(--radius);
@@ -125,9 +145,16 @@
       padding: 18px;
       margin-bottom: 16px;
     }
-    .hero h2{margin:0 0 8px;font-size:26px;letter-spacing:.2px}
-    .hero p{margin:0 0 10px;color:var(--muted)}
-    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .hero h2{
+      margin: 0 0 8px;
+      font-size: 26px;
+      letter-spacing:.2px;
+    }
+    .hero p{margin: 0 0 10px; color: var(--muted)}
+    .hero .chips{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:10px;
+    }
     .chip{
       border:1px solid var(--border);
       background: rgba(255,255,255,.78);
@@ -145,7 +172,11 @@
       to{opacity:1; transform: translateY(0)}
     }
 
-    .grid{display:grid;grid-template-columns: repeat(12, 1fr);gap: var(--gap);}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--gap);
+    }
 
     .card{
       border:1px solid var(--border);
@@ -159,10 +190,9 @@
 
     .muted{color:var(--muted)}
     h3,h4{margin: 0 0 8px}
-    h3{font-size:18px}
-    h4{font-size:15px}
+    h3{font-size: 18px}
+    h4{font-size: 15px}
 
-    .btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
     .btn{
       display:inline-flex;
       align-items:center;
@@ -175,21 +205,15 @@
       cursor:pointer;
       text-decoration:none;
       font-weight: 750;
-      color: inherit;
     }
     .btn.alt{
       border-color: var(--border);
       background: rgba(255,255,255,.70);
       font-weight: 700;
     }
+    .btn:hover{filter:brightness(1.02)}
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px}
 
-    blockquote{
-      margin: 10px 0 0;
-      padding: 12px 14px;
-      border-left: 4px solid rgba(43,100,255,.35);
-      background: rgba(255,255,255,.62);
-      border-radius: 14px;
-    }
     .verse{
       border:1px dashed rgba(20,35,70,.25);
       border-radius: 14px;
@@ -198,9 +222,15 @@
       color:#122349;
       margin: 10px 0 0;
     }
+    blockquote{
+      margin: 10px 0 0;
+      padding: 12px 14px;
+      border-left: 4px solid rgba(43,100,255,.35);
+      background: rgba(255,255,255,.62);
+      border-radius: 14px;
+    }
 
-    /* inputs */
-    label{display:block;font-weight:700;margin:10px 0 6px}
+    label{display:block; font-weight:700; margin: 10px 0 6px}
     input, textarea{
       width: 100%;
       border:1px solid var(--border);
@@ -211,23 +241,25 @@
       outline:none;
     }
     textarea{min-height: 110px; resize: vertical}
+    .fineprint{font-size: 12.5px; color: var(--muted); margin-top: 10px}
 
-    /* checklist */
     .checklist{
       list-style:none;
       padding:0; margin: 10px 0 0;
-      display:grid; gap: 10px;
+      display:grid;
+      gap: 10px;
     }
     .checklist li{
-      display:flex; gap: 10px; align-items:flex-start;
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
       border:1px solid var(--border);
       border-radius: 14px;
       padding: 10px 12px;
       background: rgba(255,255,255,.62);
     }
-    .checklist input{width:18px;height:18px;margin-top:2px}
+    .checklist input{width:18px; height:18px; margin-top:2px}
 
-    /* defects grid */
     .defects{
       margin: 10px 0 0;
       display:grid;
@@ -241,16 +273,7 @@
       background: rgba(255,255,255,.62);
     }
     .defect h4{margin:0 0 6px}
-    .defect p{margin:0;color:var(--muted)}
-
-    .notice{
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.62);
-      border-radius: 14px;
-      padding: 10px 12px;
-      color: var(--muted);
-      margin-top: 10px;
-    }
+    .defect p{margin:0; color:var(--muted)}
 
     @media (max-width: 980px){
       .wrap{grid-template-columns: 1fr}
@@ -264,16 +287,26 @@
       color: var(--muted);
       font-size: 12.5px;
     }
+
+    .notice{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.62);
+      border-radius: 14px;
+      padding: 10px 12px;
+      color: var(--muted);
+      margin-top: 10px;
+    }
   </style>
 </head>
 
 <body>
+  <div class="bg-overlay-image"></div>
+
   <div class="wrap">
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="brand">
         <h1>Hope & Recovery in Jesus</h1>
-        <p class="tag">Salvation • Freedom • Healing • Discipleship</p>
+        <p class="tag">Freedom • Healing • Salvation • Discipleship</p>
       </div>
 
       <nav class="nav" aria-label="Site navigation">
@@ -283,33 +316,33 @@
         <button data-panel="defects">Defects & Healing <small>Heart</small></button>
         <button data-panel="codependency">Codependency <small>Checklist</small></button>
         <button data-panel="surrender">Surrender <small>Contract</small></button>
-        <button data-panel="defense">Defense <small>Examples</small></button>
+        <button data-panel="defense">Defense Mechanisms <small>Examples</small></button>
         <button data-panel="connect">Connect <small>Churches</small></button>
         <button data-panel="pray">Prayer Request <small>Email</small></button>
       </nav>
 
       <div class="mini">
-        <div><strong>Scripture anchor:</strong> “For the word of God is living and powerful, and sharper than any two-edged sword, piercing to the division of soul and spirit, and of joints and marrow, and is a discerner of the thoughts and intents of the heart.” (Hebrews 4:12)</div>
+        <div><strong>Reminder:</strong> This site points to Jesus Christ as Lord.</div>
+        <div>“If the Son makes you free, you shall be free indeed.” (John 8:36)</div>
       </div>
     </aside>
 
-    <!-- MAIN -->
     <main class="main">
       <section class="hero">
         <h2>Hope & Recovery in Jesus Christ</h2>
         <p class="muted">
-          Hope, healing, and freedom through Jesus Christ—salvation, discipleship, and real recovery.
+          Recovery is not behavior modification—it is transformation. Jesus Christ does not merely help us cope; He sets us free.
         </p>
         <div class="chips">
-          <span class="chip">Free gift of salvation</span>
           <span class="chip">Freedom from addictions</span>
-          <span class="chip">Healing from heart struggles</span>
-          <span class="chip">Find Bible-teaching churches</span>
+          <span class="chip">Freedom from anger & anxiety</span>
+          <span class="chip">The free gift of salvation</span>
+          <span class="chip">Bible-based discipleship</span>
         </div>
         <div class="btnrow">
           <a class="btn" href="#" onclick="openPanel('salvation'); return false;">Start with Salvation</a>
           <a class="btn alt" href="#" onclick="openPanel('recovery'); return false;">Recovery Help</a>
-          <a class="btn alt" href="#" onclick="openPanel('connect'); return false;">Find a Church</a>
+          <a class="btn alt" href="#" onclick="openPanel('pray'); return false;">Send Prayer Request</a>
         </div>
       </section>
 
@@ -328,45 +361,18 @@
             <div class="verse">
               “Walk in the Spirit, and you shall not fulfill the lust of the flesh.” <strong>Galatians 5:16</strong>
             </div>
-
-            <div class="btnrow">
-              <a class="btn" href="#" onclick="openPanel('salvation'); return false;">Salvation</a>
-              <a class="btn alt" href="#" onclick="openPanel('surrender'); return false;">Surrender</a>
-              <a class="btn alt" href="#" onclick="openPanel('pray'); return false;">Prayer</a>
-            </div>
           </div>
 
           <div class="card soft" style="grid-column: span 5;">
-            <h3>Two Common Areas of Bondage</h3>
+            <h3>Two Kinds of Bondage</h3>
+            <p class="muted">Many people need freedom from both:</p>
             <ul>
-              <li><strong>Addictions:</strong> drugs, alcohol, pain killers, porn, gaming/escapism</li>
-              <li><strong>Heart struggles:</strong> anger, anxiety, jealousy, control, fear, relationships</li>
+              <li><strong>Addictions:</strong> drugs, alcohol, pain killers, porn, sexual bondage, gaming/escapism</li>
+              <li><strong>Heart & character struggles:</strong> anger, anxiety, jealousy, control, fear, relationship damage</li>
             </ul>
-            <div class="notice">
-              This is Christ-centered recovery. You are not alone, and you are not disqualified.
-            </div>
-          </div>
-        </div>
-
-        <div class="grid" style="margin-top:16px;">
-          <div class="card" style="grid-column: span 7;">
-            <h3>Daily Devotional</h3>
-            <p class="muted" id="devotionalTitle">Loading…</p>
-            <blockquote id="devotionalVerse"></blockquote>
-            <p class="muted" id="devotionalBody"></p>
             <div class="btnrow">
-              <button class="btn alt" onclick="prevDevotional()">Back</button>
-              <button class="btn alt" onclick="nextDevotional()">Next</button>
-              <a class="btn" href="#" onclick="openPanel('pray'); return false;">Ask for Prayer</a>
-            </div>
-          </div>
-
-          <div class="card soft" style="grid-column: span 5;">
-            <h3>Scripture Search + Interpretation</h3>
-            <p class="muted">Search a topic (example: “anger”, “fear”, “salvation”, “forgiveness”, “control”).</p>
-            <input id="bibleSearchInput" type="text" placeholder="Search…" oninput="runBibleSearch()" />
-            <div class="notice" id="bibleSearchResults" style="margin-top:10px;">
-              Start typing to search.
+              <a class="btn" href="#" onclick="openPanel('recovery'); return false;">Freedom from Addictions</a>
+              <a class="btn alt" href="#" onclick="openPanel('defects'); return false;">Freedom in the Heart</a>
             </div>
           </div>
         </div>
@@ -388,7 +394,7 @@
             <ul>
               <li><strong>Romans 3:23</strong> — All have sinned and fall short of God’s glory.</li>
               <li><strong>Romans 6:23</strong> — Sin brings death, but God offers eternal life in Christ.</li>
-              <li><strong>Romans 5:8</strong> — Christ died for us while we were sinners.</li>
+              <li><strong>Romans 5:8</strong> — God shows His love: Christ died for us while we were sinners.</li>
               <li><strong>Romans 10:9–10</strong> — Confess Jesus as Lord, believe God raised Him from the dead.</li>
             </ul>
           </div>
@@ -405,6 +411,11 @@
               “If you confess with your mouth the Lord Jesus and believe in your heart that God has raised Him from the dead,
               you will be saved.” <strong>Romans 10:9</strong>
             </div>
+
+            <div class="btnrow">
+              <a class="btn" href="#" onclick="openPanel('pray'); return false;">Ask for Prayer</a>
+              <a class="btn alt" href="#" onclick="openPanel('recovery'); return false;">Recovery Through Jesus</a>
+            </div>
           </div>
         </div>
       </section>
@@ -414,13 +425,9 @@
         <div class="grid">
           <div class="card" style="grid-column: span 7;">
             <h3>Freedom From Addictions</h3>
-
-            <blockquote>
-              “Recovery is not behavior modification—it is transformation. Jesus Christ does not merely help us cope; He sets us free.”
-            </blockquote>
-
             <p class="muted">
-              Addiction often begins as relief, escape, or control. Jesus breaks chains and brings light.
+              Many people are not weak—they are bound. Addiction often starts as relief, escape, or control.
+              Jesus came to break chains, not condemn sinners.
             </p>
             <ul>
               <li>Drugs & alcohol</li>
@@ -429,8 +436,13 @@
               <li>Gaming / doom-scrolling / escapism</li>
             </ul>
 
+            <blockquote>
+              “Therefore if the Son makes you free, you shall be free indeed.”
+              <br><strong>John 8:36</strong>
+            </blockquote>
+
             <div class="verse">
-              “Therefore if the Son makes you free, you shall be free indeed.” <strong>John 8:36</strong>
+              Recovery does not come by willpower alone. It grows through repentance, surrender, and walking in the Spirit.
             </div>
           </div>
 
@@ -446,7 +458,6 @@
             <div class="btnrow">
               <a class="btn" href="#" onclick="openPanel('surrender'); return false;">Surrender</a>
               <a class="btn alt" href="#" onclick="openPanel('defense'); return false;">Defense Mechanisms</a>
-              <a class="btn alt" href="#" onclick="openPanel('connect'); return false;">Find a Church</a>
             </div>
           </div>
         </div>
@@ -458,7 +469,8 @@
           <div class="card" style="grid-column: span 12;">
             <h3>Defects & Healing (Heart + Character)</h3>
             <p class="muted">
-              The Lord transforms from the inside out. These are starting explanations (short) and can expand over time.
+              The Lord transforms the heart from the inside out. Below are common struggles (no page numbers).
+              Each one will grow over time into a deeper, Scripture-centered guide.
             </p>
 
             <div class="defects">
@@ -473,43 +485,47 @@
               <div class="defect">
                 <h4>Anxiety</h4>
                 <p>
-                  Anxiety often comes from carrying what only God can carry. Bring your requests to Him and receive peace
-                  (Philippians 4:6–7). Trust grows through prayer and obedience, not control.
+                  Anxiety often comes from carrying what only God can carry. The Lord calls us to bring our requests to Him
+                  and receive His peace (Philippians 4:6–7). Trust grows through prayer and obedience, not control.
                 </p>
               </div>
 
               <div class="defect">
                 <h4>Jealousy & Comparison</h4>
                 <p>
-                  Comparison steals gratitude. Love “does not envy” (1 Corinthians 13:4). Your identity is in Christ, not performance.
+                  Comparison steals gratitude and breeds resentment. Love “does not envy” (1 Corinthians 13:4).
+                  The Lord teaches contentment and identity in Christ, not in performance.
                 </p>
               </div>
 
               <div class="defect">
                 <h4>Control</h4>
                 <p>
-                  Control is often fear wearing a mask. God calls us to trust Him with outcomes (Proverbs 3:5–6). Surrender is where peace begins.
+                  Control can be fear wearing a mask. God calls us to trust Him with outcomes (Proverbs 3:5–6).
+                  Surrender is where peace begins.
                 </p>
               </div>
 
               <div class="defect">
                 <h4>Codependency</h4>
                 <p>
-                  Codependency is fear-driven attachment that replaces trust in God with rescuing, pleasing, or self-neglect. Jesus restores right order.
+                  Codependency is not love—it is fear-driven attachment that replaces trust in God with rescuing, pleasing,
+                  or self-neglect. Jesus restores right order: God first, then others, then self.
                 </p>
               </div>
 
               <div class="defect">
                 <h4>Relationships</h4>
                 <p>
-                  Healing relationships starts with truth, repentance, boundaries, and forgiveness (Matthew 18:15–17). Love is not the same as enabling.
+                  Healing relationships starts with truth, repentance, boundaries, and forgiveness.
+                  Jesus teaches reconciliation without pretending evil is okay (Matthew 18:15–17).
                 </p>
               </div>
             </div>
 
             <div class="btnrow">
               <a class="btn" href="#" onclick="openPanel('codependency'); return false;">Codependency Checklist</a>
-              <a class="btn alt" href="#" onclick="openPanel('surrender'); return false;">Surrender Contract</a>
+              <a class="btn alt" href="#" onclick="openPanel('surrender'); return false;">Total Surrender</a>
             </div>
           </div>
         </div>
@@ -521,30 +537,39 @@
           <div class="card" style="grid-column: span 7;">
             <h3>Codependency</h3>
             <p class="muted">
-              Codependency is not love—it is fear-driven attachment that replaces trust in God with control, rescuing, or self-neglect.
+              Codependency is not love—it is fear-driven attachment that replaces trust in God with control, rescuing,
+              or self-neglect. Many believers struggle here because they are caring and responsible.
             </p>
+            <p>
+              Scripture calls us to love others, but never at the cost of obedience to Christ and truth.
+              Jesus restores right order—God first, then others, then self.
+            </p>
+
             <div class="verse">
               “Cast all your care upon Him, for He cares for you.” <strong>1 Peter 5:7</strong>
             </div>
           </div>
 
           <div class="card soft" style="grid-column: span 5;">
-            <h3>Self-Reflection Checklist</h3>
+            <h3>Codependency Self-Reflection</h3>
             <p class="muted">Check what resonates. This is for honesty before God—not shame.</p>
+
             <ul class="checklist" id="codependencyChecklist">
               <li><input type="checkbox"> <span>I feel responsible for fixing others’ emotions or outcomes.</span></li>
               <li><input type="checkbox"> <span>I struggle to say no, even when I’m exhausted or resentful.</span></li>
-              <li><input type="checkbox"> <span>My worth depends on being needed or appreciated.</span></li>
+              <li><input type="checkbox"> <span>My sense of worth depends on being needed or appreciated.</span></li>
               <li><input type="checkbox"> <span>I stay in unhealthy relationships longer than I should.</span></li>
               <li><input type="checkbox"> <span>I feel anxious when others are upset—even if it’s not my fault.</span></li>
               <li><input type="checkbox"> <span>I avoid conflict but later feel angry or withdrawn.</span></li>
               <li><input type="checkbox"> <span>I confuse peacekeeping with peacemaking.</span></li>
               <li><input type="checkbox"> <span>I neglect my own spiritual, emotional, or physical needs.</span></li>
             </ul>
+
             <div class="btnrow">
               <button class="btn alt" onclick="resetChecklist('codependencyChecklist')">Reset Checks</button>
               <a class="btn" href="#" onclick="openPanel('pray'); return false;">Bring It To Prayer</a>
             </div>
+
             <div class="notice" id="codependencyScoreNotice"></div>
           </div>
         </div>
@@ -556,22 +581,32 @@
           <div class="card" style="grid-column: span 7;">
             <h3>What Is Surrender?</h3>
             <p>
-              Surrender is the end of self-rule and the beginning of trust. Recovery begins when we admit our way is not working and God’s way is better.
+              Surrender is not weakness—it is the end of self-rule and the beginning of trust.
+              Recovery begins when we admit that our way is not working and God’s way is better.
             </p>
+            <p>
+              Jesus calls for whole-life discipleship:
+              <strong>“If anyone desires to come after Me, let him deny himself, take up his cross, and follow Me.”</strong>
+              (Luke 9:23)
+            </p>
+
             <blockquote>
-              “If anyone desires to come after Me, let him deny himself, take up his cross, and follow Me.” <br><strong>Luke 9:23</strong>
+              “Trust in the Lord with all your heart, and lean not on your own understanding;
+              in all your ways acknowledge Him, and He shall direct your paths.”
+              <br><strong>Proverbs 3:5–6</strong>
             </blockquote>
-            <div class="verse">
-              “Trust in the LORD with all your heart… and He shall direct your paths.” <strong>Proverbs 3:5–6</strong>
-            </div>
           </div>
 
           <div class="card soft" style="grid-column: span 5;">
             <h3>Total Surrender Prayer</h3>
             <blockquote>
-              Lord Jesus, I surrender my will, my emotions, my plans, my relationships, my past, my future, my reputation,
-              my need to be right, and my need to control outcomes. I belong to You. Lead my life. In Jesus’ name, amen.
+              Lord Jesus, I surrender my will, my emotions, my plans, my relationships, my past,
+              my future, my reputation, my need to be right, and my need to control outcomes.
+              <br><br>
+              I belong to You. I trust You to lead my life.
+              In Your name, amen.
             </blockquote>
+
             <div class="verse">
               “Not my will, but Yours, be done.” <strong>Luke 22:42</strong>
             </div>
@@ -580,7 +615,7 @@
           <div class="card" style="grid-column: span 12;">
             <h3>Total Surrender Contract (Optional)</h3>
             <p class="muted">
-              This site is currently static, so contracts are not saved automatically yet. For live counting and charts, we can connect this to Google Forms + Sheets.
+              If you want, you can make a simple commitment before God. This is not legalism—this is surrender.
             </p>
 
             <label for="contractName">Name (optional)</label>
@@ -601,54 +636,62 @@ I belong to You. Lead me in truth and love. In Jesus’ name, amen.</textarea>
             <div class="btnrow">
               <button class="btn" onclick="copyContract()">Copy Contract Text</button>
               <button class="btn alt" onclick="fillToday()">Set Date to Today</button>
-              <a class="btn alt" href="#" onclick="openPanel('connect'); return false;">Get Discipled</a>
             </div>
+
+            <p class="fineprint">
+              Tip: Copy this and save it in your notes. Keep it between you and the Lord.
+            </p>
           </div>
         </div>
       </section>
 
-      <!-- DEFENSE -->
+      <!-- DEFENSE MECHANISMS -->
       <section class="panel" id="panel-defense">
         <div class="grid">
           <div class="card" style="grid-column: span 12;">
             <h3>Defense Mechanisms</h3>
             <p class="muted">
-              Defense mechanisms are ways we protect ourselves from pain—but they often block healing. These examples include Scripture anchors and Bible references.
+              Defense mechanisms are ways we try to neutralize pain or anxiety—but they often block healing.
+              Below are examples with Scripture anchors and a Bible story reference.
             </p>
           </div>
 
           <div class="card" style="grid-column: span 6;">
             <h3>Denial</h3>
-            <p class="muted">Avoiding truth to avoid pain. Freedom requires honesty before God.</p>
+            <p class="muted">Denial avoids truth to avoid pain. Freedom requires honesty before God.</p>
             <blockquote>
-              “Search me, O God, and know my heart… and lead me in the way everlasting.” <br><strong>Psalm 139:23–24</strong>
+              “Search me, O God, and know my heart… and lead me in the way everlasting.”
+              <br><strong>Psalm 139:23–24</strong>
             </blockquote>
             <p class="muted"><strong>Bible example:</strong> David before repentance (Psalm 32; 2 Samuel 12).</p>
           </div>
 
           <div class="card" style="grid-column: span 6;">
             <h3>Projection</h3>
-            <p class="muted">Blaming others for what we refuse to face in ourselves.</p>
+            <p class="muted">Projection blames others for what we refuse to face in ourselves.</p>
             <blockquote>
-              “Why do you look at the speck in your brother’s eye, but do not consider the plank in your own eye?” <br><strong>Matthew 7:3</strong>
+              “Why do you look at the speck in your brother’s eye, but do not consider the plank in your own eye?”
+              <br><strong>Matthew 7:3</strong>
             </blockquote>
             <p class="muted"><strong>Bible example:</strong> Saul blaming others (1 Samuel 15).</p>
           </div>
 
           <div class="card" style="grid-column: span 6;">
             <h3>Rationalization</h3>
-            <p class="muted">Excusing disobedience instead of repenting.</p>
+            <p class="muted">Rationalization excuses disobedience. God calls us to truth.</p>
             <blockquote>
-              “There is a way that seems right to a man, but its end is the way of death.” <br><strong>Proverbs 14:12</strong>
+              “There is a way that seems right to a man, but its end is the way of death.”
+              <br><strong>Proverbs 14:12</strong>
             </blockquote>
             <p class="muted"><strong>Bible example:</strong> Adam and Eve excusing sin (Genesis 3).</p>
           </div>
 
           <div class="card" style="grid-column: span 6;">
             <h3>Control (as defense)</h3>
-            <p class="muted">Trying to force outcomes to reduce anxiety. Peace comes through surrender.</p>
+            <p class="muted">Control tries to fix anxiety by forcing outcomes. Peace comes through surrender.</p>
             <blockquote>
-              “Be anxious for nothing… and the peace of God… will guard your hearts and minds through Christ Jesus.” <br><strong>Philippians 4:6–7</strong>
+              “Be anxious for nothing… and the peace of God… will guard your hearts and minds through Christ Jesus.”
+              <br><strong>Philippians 4:6–7</strong>
             </blockquote>
             <p class="muted"><strong>Bible example:</strong> Martha’s anxious control (Luke 10:38–42).</p>
           </div>
@@ -661,34 +704,194 @@ I belong to You. Lead me in truth and love. In Jesus’ name, amen.</textarea>
           <div class="card" style="grid-column: span 7;">
             <h3>Connect With Bible-Teaching Churches</h3>
             <p class="muted">
-              God uses His Word and His people to strengthen and disciple us.
+              God often brings healing through discipleship, fellowship, and healthy community.
+            </p>
+            <ul>
+              <li>Find a church that teaches the Bible and centers on Jesus Christ.</li>
+              <li>Ask for discipleship, prayer, accountability, and service opportunities.</li>
+              <li>Recovery grows best in truth + love + consistent community.</li>
+            </ul>
+
+            <div class="verse">
+              “And let us consider one another… not forsaking the assembling of ourselves together…”
+              <strong>Hebrews 10:24–25</strong>
+            </div>
+          </div>
+
+          <div class="card soft" style="grid-column: span 5;">
+            <h3>Christian Profile (Future Feature)</h3>
+            <p class="muted">
+              This site is currently static (GitHub Pages). Profiles, logins, and private messaging require a real backend.
+            </p>
+            <p class="muted">
+              For now, use Prayer Request to connect by email.
+            </p>
+            <div class="btnrow">
+              <a class="btn" href="#" onclick="openPanel('pray'); return false;">Prayer Request</a>
+              <a class="btn alt" href="#" onclick="openPanel('salvation'); return false;">Salvation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRAYER REQUEST -->
+      <section class="panel" id="panel-pray">
+        <div class="grid">
+          <div class="card" style="grid-column: span 7;">
+            <h3>Prayer Request</h3>
+            <p class="muted">
+              This will open your email app (no data is stored on this website).
             </p>
 
+            <label for="prayName">Name (optional)</label>
+            <input id="prayName" type="text" placeholder="Your name (optional)">
+
+            <label for="prayMessage">Prayer request</label>
+            <textarea id="prayMessage" placeholder="Write what you want prayer for..."></textarea>
+
+            <div class="btnrow">
+              <button class="btn" onclick="sendPrayerEmail()">Open Email</button>
+              <button class="btn alt" onclick="clearPrayer()">Clear</button>
+            </div>
+
+            <div class="notice">
+              If you want this to go to a real inbox, update the email address inside the script below.
+            </div>
+          </div>
+
+          <div class="card soft" style="grid-column: span 5;">
+            <h3>Promise of Peace</h3>
             <blockquote>
-              “All Scripture is given by inspiration of God, and is profitable for doctrine, for reproof, for correction,
-              for instruction in righteousness, that the man of God may be complete, thoroughly equipped for every good work.”
-              <br><strong>2 Timothy 3:16–17
+              “The Lord is near. Be anxious for nothing… and the peace of God… will guard your hearts and minds through Christ Jesus.”
+              <br><strong>Philippians 4:5–7</strong>
+            </blockquote>
+            <div class="verse">
+              “Call to Me, and I will answer you…” <strong>Jeremiah 33:3</strong>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <footer>
+        <div>© <span id="year"></span> • Hope & Recovery in Jesus Christ</div>
+      </footer>
 
-<p class="muted">
-  Look for churches that teach the Bible clearly and keep Jesus central. Start with the Word, not trends.
-</p>
-
-<div class="row" style="gap:10px;flex-wrap:wrap;margin-top:10px">
-  <a class="btn" target="_blank" rel="noopener"
-     href="https://www.google.com/maps/search/?api=1&query=bible+teaching+church+near+me">
-     Find Bible-teaching churches near me
-  </a>
-
-  <a class="btn alt" target="_blank" rel="noopener"
-     href="https://www.google.com/maps/search/?api=1&query=calvary+chapel+near+me">
-     Find Calvary Chapel near me
-  </a>
-</div>
-
-<p class="muted" style="margin-top:10px">
-  2 Timothy 3:16–17 shows Scripture equips believers for every good work.
-</p>
-    </div>
+    </main>
   </div>
-</section>
+
+  <script>
+    // ---------- Navigation ----------
+    const navButtons = Array.from(document.querySelectorAll('.nav button'));
+    const panels = Array.from(document.querySelectorAll('.panel'));
+
+    function openPanel(name){
+      panels.forEach(p => p.classList.remove('active'));
+      const el = document.getElementById('panel-' + name);
+      if (el) el.classList.add('active');
+
+      navButtons.forEach(b => b.classList.toggle('active', b.dataset.panel === name));
+
+      // Keep URL tidy (no reload)
+      history.replaceState(null, '', '#'+name);
+
+      // small extras
+      if(name === 'codependency') updateCodependencyScore();
+    }
+
+    navButtons.forEach(btn => {
+      btn.addEventListener('click', () => openPanel(btn.dataset.panel));
+    });
+
+    // Load panel from URL hash
+    const initial = (location.hash || '#home').replace('#','');
+    openPanel(initial);
+
+    // ---------- Utilities ----------
+    function resetChecklist(listId){
+      const list = document.getElementById(listId);
+      if(!list) return;
+      list.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+      if(listId === 'codependencyChecklist') updateCodependencyScore();
+    }
+
+    function copyContract(){
+      const name = document.getElementById('contractName').value.trim();
+      const date = document.getElementById('contractDate').value;
+      const text = document.getElementById('contractText').value.trim();
+
+      const header = [
+        'TOTAL SURRENDER CONTRACT',
+        name ? ('Name: ' + name) : '',
+        date ? ('Date: ' + date) : '',
+        ''
+      ].filter(Boolean).join('\n');
+
+      const finalText = header + '\n' + text;
+
+      navigator.clipboard.writeText(finalText)
+        .then(() => alert('Contract copied to clipboard.'))
+        .catch(() => alert('Copy failed. You can manually select and copy the text.'));
+    }
+
+    function fillToday(){
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth()+1).padStart(2,'0');
+      const dd = String(d.getDate()).padStart(2,'0');
+      document.getElementById('contractDate').value = `${yyyy}-${mm}-${dd}`;
+    }
+
+    // ---------- Codependency score (simple + helpful) ----------
+    const cdList = document.getElementById('codependencyChecklist');
+    if (cdList){
+      cdList.addEventListener('change', updateCodependencyScore);
+      updateCodependencyScore();
+    }
+
+    function updateCodependencyScore(){
+      const notice = document.getElementById('codependencyScoreNotice');
+      if(!cdList || !notice) return;
+      const total = cdList.querySelectorAll('input[type="checkbox"]').length;
+      const checked = cdList.querySelectorAll('input[type="checkbox"]:checked').length;
+
+      let msg = `Checked: ${checked} of ${total}. `;
+      if(checked === 0){
+        msg += 'Use this as a mirror for prayer, not a label.';
+      } else if(checked <= 2){
+        msg += 'A few signs. Ask the Lord for wisdom, boundaries, and truth.';
+      } else if(checked <= 5){
+        msg += 'Several signs. Consider discipleship, accountability, and practical boundaries.';
+      } else {
+        msg += 'Many signs. Bring this into the light with a trusted pastor/mentor and pursue a clear plan of surrender and truth.';
+      }
+      notice.textContent = msg;
+    }
+
+    // ---------- Prayer email (static site safe method) ----------
+    // CHANGE THIS to your email:
+    const PRAYER_EMAIL_TO = 'your-email@example.com';
+
+    function sendPrayerEmail(){
+      const name = document.getElementById('prayName').value.trim();
+      const msg = document.getElementById('prayMessage').value.trim();
+
+      const subject = encodeURIComponent('Prayer Request' + (name ? (' - ' + name) : ''));
+      const body = encodeURIComponent(
+        (name ? ('Name: ' + name + '\n\n') : '') +
+        (msg ? msg : '[No message entered]')
+      );
+
+      const mailto = `mailto:${PRAYER_EMAIL_TO}?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    function clearPrayer(){
+      document.getElementById('prayName').value = '';
+      document.getElementById('prayMessage').value = '';
+    }
+
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
