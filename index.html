@@ -42,6 +42,12 @@
 
         <!-- HOME -->
         <section class="panel active" id="panel-home">
+          <div class="card" style="grid-column: span 12;">
+  <h2>Daily Scripture</h2>
+  <blockquote id="dailyVerseText" style="white-space: pre-line;"></blockquote>
+  <p class="muted" id="dailyVerseRef"></p>
+</div>
+
           <div class="grid">
             <div class="card" style="grid-column: span 12;">
               <h2>The Free Gift of God</h2>
@@ -309,6 +315,62 @@ In Jesus’ name, amen.
         "&body=" + encodeURIComponent(body);
     });
   }
+  // =========================
+// DAILY SCRIPTURE ROTATION
+// =========================
+(function setDailyScripture() {
+  const verses = [
+    {
+      ref: "Hebrews 4:12",
+      text:
+`For the word of God is living and powerful, and sharper than any two-edged sword,
+piercing even to the division of soul and spirit, and of joints and marrow,
+and is a discerner of the thoughts and intents of the heart.`
+    },
+    {
+      ref: "Joshua 1:8",
+      text:
+`This Book of the Law shall not depart from your mouth,
+but you shall meditate in it day and night,
+that you may observe to do according to all that is written in it.
+For then you will make your way prosperous,
+and then you will have good success.`
+    },
+    {
+      ref: "Psalm 119:105",
+      text:
+`Your word is a lamp to my feet
+and a light to my path.`
+    },
+    {
+      ref: "Proverbs 3:5–6",
+      text:
+`Trust in the LORD with all your heart,
+and lean not on your own understanding;
+in all your ways acknowledge Him,
+and He shall direct your paths.`
+    },
+    {
+      ref: "Ephesians 6:10–18",
+      text:
+`Finally, my brethren, be strong in the Lord and in the power of His might.
+Put on the whole armor of God, that you may be able to stand against the wiles of the devil...`
+    },
+    {
+      ref: "Galatians 5:22–23",
+      text:
+`But the fruit of the Spirit is love, joy, peace, longsuffering, kindness,
+goodness, faithfulness, gentleness, self-control.`
+    },
+    {
+      ref: "2 Timothy 3:16–17",
+      text:
+`All Scripture is given by inspiration of God,
+and is profitable for doctrine, for reproof, for correction,
+for instruction in righteousness,
+that the man of God may be complete,
+thoroughly equipped for every good work
+
 </script>
 
 </body>
